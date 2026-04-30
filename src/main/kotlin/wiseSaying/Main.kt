@@ -2,7 +2,7 @@ package wiseSaying
 
 fun main(){
     println("== 명언 앱 ==")
-
+    var lastId = 0;
     while (true){
         print("명령) ")
 
@@ -17,6 +17,8 @@ fun main(){
                 val  content = readln()
                 print("작가 : ")
                 val author = readln()
+                val id = ++lastId
+                println("${id}번 명령이 등록되었습니다.")
             }
         }
     }
