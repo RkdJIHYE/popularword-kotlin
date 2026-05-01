@@ -1,4 +1,6 @@
-package wiseSaying
+package wiseSaying.repository
+
+import wiseSaying.entity.WiseSaying
 
 class WiseSayingRepository {
 

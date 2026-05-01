@@ -1,4 +1,7 @@
-package wiseSaying
+package wiseSaying.controller
+
+import wiseSaying.service.WiseSayingService
+import gobal.Rq
 
 class WiseSayingController(
     private val wiseSayingService: WiseSayingService = WiseSayingService()

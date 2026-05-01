@@ -1,5 +1,4 @@
-package wiseSaying
-
+package gobal
 
 class Rq(
     cmd: String,

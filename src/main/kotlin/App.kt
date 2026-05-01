@@ -1,4 +1,6 @@
-package wiseSaying
+import gobal.Rq
+import domain.system.controller.SystemController
+import wiseSaying.controller.WiseSayingController
 
 class App(
     val wiseSayingController: WiseSayingController = WiseSayingController(),
