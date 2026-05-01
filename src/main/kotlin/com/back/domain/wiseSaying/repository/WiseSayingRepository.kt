@@ -1,6 +1,6 @@
-package wiseSaying.repository
+package com.back.domain.wiseSaying.repository
 
-import wiseSaying.entity.WiseSaying
+import com.back.domain.wiseSaying.entity.WiseSaying
 
 class WiseSayingRepository {
 
@@ -25,4 +25,8 @@ class WiseSayingRepository {
 
     fun delete(wiseSaying: WiseSaying) = wiseSayings.remove(wiseSaying)
 
+    fun clear() {
+        lastId = 0
+        wiseSayings.clear()
+    }
 }

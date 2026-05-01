@@ -1,4 +1,4 @@
-package gobal
+package com.back.global
 
 class Rq(
     cmd: String,

@@ -1,12 +1,12 @@
-package wiseSaying.controller
+package com.back.domain.wiseSaying.controller
 
-import wiseSaying.service.WiseSayingService
-import gobal.Rq
+import com.back.domain.wiseSaying.service.WiseSayingService
+import com.back.global.Rq
+import com.back.global.SingletonScope
 
 class WiseSayingController(
-    private val wiseSayingService: WiseSayingService = WiseSayingService()
+    val wiseSayingService: WiseSayingService = SingletonScope.wiseSayingService
 ) {
-
 
     fun write() {
         print("명언: ")
@@ -16,8 +16,6 @@ class WiseSayingController(
         val author = readln().trim()
         val wiseSaying = wiseSayingService.write(content, author)
         println("${wiseSaying.id}번 명언이 등록되었습니다.")
-
-
     }
 
     fun list() {
@@ -38,8 +36,6 @@ class WiseSayingController(
         }
 
         wiseSayingService.findById(id)
-
-
             ?.let {
                 wiseSayingService.delete(it)
                 println("${id}번 명언이 삭제되었습니다.")
@@ -57,8 +53,6 @@ class WiseSayingController(
 
         val wiseSaying = wiseSayingService.findById(id)
 
-
-
         if (wiseSaying == null) {
             println("${id}번 명언은 존재하지 않습니다.")
             return
@@ -74,5 +68,4 @@ class WiseSayingController(
         wiseSaying.modify(newContent, newAuthor)
         println("${id}번 명언이 수정되었습니다.")
     }
-
 }

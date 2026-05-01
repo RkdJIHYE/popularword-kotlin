@@ -1,4 +1,4 @@
-package domain.system.controller
+package com.back.domain.system.controller
 
 class SystemController {
     fun exit() {
